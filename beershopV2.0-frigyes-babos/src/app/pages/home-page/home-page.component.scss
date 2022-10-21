@@ -7,3 +7,13 @@
   height: 2405px;
   background-color : $greyscale-white;
 }
+
+.product-window-container {
+  position: absolute;
+  width: 1284px;
+  height: 1480px;
+  left: 80px;
+  top: 421px;
+  gap: 20px;
+  background-color: $greyscale-dark-grey
+}

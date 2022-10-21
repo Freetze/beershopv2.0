@@ -12,6 +12,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { LanguageSelectComponent } from './components/language-select/language-select.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { NavigationFieldComponent } from './components/navigation-field/navigation-field.component';
+import { ProductWindowComponent } from './components/product-window/product-window.component';
+import { BeerCardComponent } from './components/beer-card/beer-card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { NavigationFieldComponent } from './components/navigation-field/navigati
     LanguageSelectComponent,
     SearchBarComponent,
     NavigationFieldComponent,
+    ProductWindowComponent,
+    BeerCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [BeerService],
