@@ -1,0 +1,38 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.search-box-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 16px;
+  gap: 10px;
+  position: absolute;
+  width: 520px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  border: 1px solid $greyscale-dark-grey;
+  border-radius: 4px;
+  .search-button {
+    position: absolute;
+    width: 40px;
+    right: 0.37px;
+    top: 0%;
+    bottom: 0%;
+    background: #5ab0bb;
+    border-radius: 0px 2px 2px 0px;
+  }
+
+  .input-container {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 5px;
+    }
+
+
+}

@@ -1,0 +1,9 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.home-page-container {
+  position: relative;
+  width: 1440px;
+  height: 2405px;
+  background-color : $greyscale-white;
+}

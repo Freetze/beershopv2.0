@@ -1,0 +1,124 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.main-header-container {
+  position: absolute;
+  width: 1445px;
+  height: 198px;
+  left: -1px;
+  top: -1px;
+  background-color: $greyscale-white;
+}
+
+.common-header-container {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 21.9%;
+  .meta-navigation-container {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 25.91%;
+  }
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    position: absolute;
+    left: 5.68%;
+    right: 89.06%;
+    top: 5.34%;
+    bottom: 82.54%;
+  }
+
+  .language-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+    position: absolute;
+    width: 57.4px;
+    height: 24px;
+    right: 93.46px;
+    top: 10.26px;
+  }
+
+  .select-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    width: 57.4px;
+    height: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+}
+.header-image-container {
+  position: absolute;
+  left: 6.3%;
+  right: 84.14%;
+  top: 37.88%;
+  bottom: 13.64%;
+}
+
+.main-navigation-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  position: absolute;
+  width: 400.57px;
+  height: 41.04px;
+  left: calc(50% - 314.57px / 2 - 157.77px);
+  top: calc(50% - 41.04px / 2 + 78.48px);
+  .navigaton-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .tablinks {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-color: aqua;
+  }
+
+  .tablinks:hover {
+    border-bottom: 3px solid $primary-turquoise-dark;
+  }
+
+  .tablinks.active {
+    background-color: #1493a4;
+  }
+}
+
+.search-bar-container {
+  position: absolute;
+  left: 28.2%;
+  right: 35.86%;
+  top: 44.04%;
+  bottom: 30.23%;
+  border-radius: 4px;
+
+}
