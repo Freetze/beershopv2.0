@@ -14,6 +14,9 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { NavigationFieldComponent } from './components/navigation-field/navigation-field.component';
 import { ProductWindowComponent } from './components/product-window/product-window.component';
 import { BeerCardComponent } from './components/beer-card/beer-card.component';
+import { FilterComponent } from './components/filter/filter.component';
+import { PrimaryButtonComponent } from './components/buttons/primary-button/primary-button.component';
+import { SecondaryButtonComponent } from './components/buttons/secondary-button/secondary-button.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { BeerCardComponent } from './components/beer-card/beer-card.component';
     NavigationFieldComponent,
     ProductWindowComponent,
     BeerCardComponent,
+    FilterComponent,
+    PrimaryButtonComponent,
+    SecondaryButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [BeerService],

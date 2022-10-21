@@ -1,7 +1,14 @@
 <div class="beer-card-container">
   <div class="upper-beer-card-container">
-    <div class="beer-img-container"></div>
-    <div class="beer-description-container"></div>
+    <div class="beer-img-container">
+      <div class="badges-container"></div>
+      <div class="img-container" style="background: url({{image_url}});"></div>
+    </div>
+    <div class="beer-description-container">
+      <small>{{ contributor }}</small>
+      <h5>{{ name }}</h5>
+      <small> {{ tagline }}</small>
+    </div>
   </div>
   <div class="bottom-beer-card-container">
     <div class="beer-price-container"></div>

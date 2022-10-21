@@ -16,4 +16,26 @@ export interface Beer {
   food_pairing: string[];
   brewers_tips: string;
   contributed_by: string;
+  "method": {
+    "mash_temp": [
+      {
+        "temp": {
+          "value": number,
+          "unit": string,
+        },
+        "duration": number,
+      }
+    ],
+    "fermentation": {
+      "temp": {
+        "value": number,
+        "unit": string,
+      }
+    },
+  },
+  "ingredients": {
+    "malt": any
+    "hops": any
+    "yeast": any
+}
 }

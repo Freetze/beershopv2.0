@@ -1,9 +1,51 @@
 <div class="beer-container">
   <div class="beer-boxes">
-    <app-beer-card></app-beer-card>
+    <ng-container *ngFor="let b of beers$ | async">
+      <app-beer-card
+        [image_url]="b.image_url"
+        [name]="b.name"
+        [tagline]="b.tagline"
+        [contributor]="b.contributed_by"
+      ></app-beer-card>
+    </ng-container>
   </div>
-  <div class="beer-boxes">
+</div>
+<div class="filter-icon-container">
+  <img src="assets/img/filter.svg" alt="" /><b>FILTER</b>
+</div>
+
+  <h4>Beer Styles</h4>
+  <a *ngFor="let f of filter$ | async">
+    <div class="filter-container" >
+  <input type="checkbox" routerLink="/" />
+  <label>IPA</label>
+  <input type="checkbox" routerLink="/" />
+  <label>PORTER & STAUT</label>
+  <input type="checkbox" routerLink="/" />
+  <label>LAGER & HELLES</label>
+  <input type="checkbox" routerLink="/" />
+  <label>SOUR ALE & WILD ALE</label>
+  <input type="checkbox" routerLink="/" />
+  <label>SOUR ALE & WILD ALE</label>
+  <br />
+  <h4>Method</h4>
+  <input type="checkbox" routerLink="/" />
+  <label>MASH TEMP</label>
+  <input type="checkbox" routerLink="/" />
+  <label>FERMENTATION</label>
+  <input type="checkbox" routerLink="/" />
+  <label>TWIST</label>
+  <br />
+  <h4>SPECIAL PRODUCTS</h4>
+  <input type="checkbox" routerLink="/" />
+  <label>OFFERS</label>
+  <div>
+
+
+    <app-secondary-button [label]="'Reset to Default'"></app-secondary-button>
   </div>
-  <div class="beer-boxes">
-  </div>
-  </div>
+</div>
+
+<!-- <div class="filter-icon" (click)="toggleFilter()">
+  <i class="fas fa-filter"></i>
+</div> -->
