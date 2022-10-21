@@ -11,6 +11,7 @@ import { BeerService } from './services/beer.service';
 import { HeaderComponent } from './components/header/header.component';
 import { LanguageSelectComponent } from './components/language-select/language-select.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { NavigationFieldComponent } from './components/navigation-field/navigation-field.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     HeaderComponent,
     LanguageSelectComponent,
     SearchBarComponent,
+    NavigationFieldComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [BeerService],
