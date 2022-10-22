@@ -5,4 +5,5 @@ export class ShoppingCartItem {
   id?: number;
   name?: string;
   image_url?: string;
+  quantity: any;
 }
