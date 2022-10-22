@@ -13,6 +13,10 @@ import { Router } from '@angular/router';
 export class ProductWindowComponent implements OnInit {
   @Input() label: string = 'Reset to Default';
   @Input('beers')
+
+  page: number = 1;
+  tableSize: number = 9;;
+
   beers$;
   filter$;
 
@@ -20,8 +24,14 @@ export class ProductWindowComponent implements OnInit {
     this.beers$ = this.service.getBeers();
     // console.log(this.beers$);
     this.filter$ = this.service.getBeers();
-    
+
   }
 
   ngOnInit(): void {}
+
+  onTableDataChange(event: Observable<Beer[]>) {
+    this.beers$ = event;
+    this.page = 1;
+  }
+
 }

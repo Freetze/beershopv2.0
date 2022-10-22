@@ -1,0 +1,16 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.shopping-cart-table {
+  width: 952px;
+  height: 188px;
+}
+.table-header-container {
+  position: absolute;
+  width: 952px;
+  height: 40px;
+  left: 0px;
+  top: 68px;
+  align-items: center;
+  background: $greyscale-very-light-grey;
+}

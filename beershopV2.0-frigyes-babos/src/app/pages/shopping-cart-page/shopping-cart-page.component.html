@@ -1,1 +1,14 @@
-<p>shopping-cart-page works!</p>
+<div class="shopping-cart-container">
+  <h2>Your Shopping Cart</h2>
+  <div class="shopping-table-container">
+    <app-shopping-cart></app-shopping-cart>
+  </div>
+  <div class="recommended-container"></div>
+
+  
+  <div class="recently-container">
+    <ng-container *ngFor="let beer of recentlyService.seenItems">
+      <app-beer-card [beer]="beer"></app-beer-card>
+    </ng-container>
+  </div>
+</div>

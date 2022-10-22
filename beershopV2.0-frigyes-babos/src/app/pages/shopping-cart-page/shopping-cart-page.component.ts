@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecentlyVisitedService } from 'src/app/services/recently.service';
 
 @Component({
   selector: 'app-shopping-cart-page',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingCartPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public recentlyService: RecentlyVisitedService) {
+
+  }
 
   ngOnInit(): void {
   }
