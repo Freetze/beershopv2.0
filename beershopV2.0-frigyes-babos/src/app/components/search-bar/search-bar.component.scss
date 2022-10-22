@@ -13,7 +13,7 @@
   height: 40px;
   left: 0px;
   top: 0px;
-  border: 1px solid $greyscale-dark-grey;
+  border: 1px solid $greyscale-dark-grey;;
   border-radius: 4px;
   .search-button {
     position: absolute;
@@ -32,7 +32,22 @@
     outline: none;
     font-size: 16px;
     padding: 0 5px;
-    }
+  }
 
-
+  .danger-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px 16px;
+    gap: 10px;
+    position: absolute;
+    width: 520px;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+     border: 1px solid #be0028;
+    border-radius: 4px;
+    color: #be0028;
+  }
 }

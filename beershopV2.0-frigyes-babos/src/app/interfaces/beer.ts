@@ -17,6 +17,10 @@ export interface Beer {
   brewers_tips: string;
   contributed_by: string;
   price: number;
+  badgeType: number
+  badge: boolean;
+  productOfTheWeek: boolean;
+  originalPrice: number;
 //   "method": {
 //     "mash_temp": [
 //       {

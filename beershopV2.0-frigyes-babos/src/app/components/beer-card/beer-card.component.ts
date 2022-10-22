@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { Beer } from 'src/app/interfaces/beer';
 import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
-import { Observable } from 'rxjs';
 import { BeerService } from 'src/app/services/beer.service';
 
 @Component({
@@ -17,7 +15,7 @@ export class BeerCardComponent implements OnInit {
   @Input() tagline?: string;
   @Input() contributor?: string;
 
-  constructor(private cartService: ShoppingCartService) {}
+  constructor(private cartService: ShoppingCartService, private beerService: BeerService) {}
 
   ngOnInit(): void {}
 }
