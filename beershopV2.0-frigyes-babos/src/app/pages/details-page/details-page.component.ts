@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Beer } from 'src/app/interfaces/beer';
+import { BeerService } from 'src/app/services/beer.service';
 
 @Component({
   selector: 'app-details-page',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsPageComponent implements OnInit {
 
-  constructor() { }
+  beer?: Beer;
+
+  constructor( private service: BeerService) { }
 
   ngOnInit(): void {
   }

@@ -1,8 +1,9 @@
 <div class="beer-card-container">
   <div class="upper-beer-card-container">
     <div class="beer-img-container">
-      <div class="badges-container"></div>
-      <div class="img-container" style="background: url({{image_url}});"></div>
+      <div class="badges-container">
+      </div>
+      <div class="img-container" style="background: url({{image_url}});" ></div>
     </div>
     <div class="beer-description-container">
       <small>{{ contributor }}</small>
@@ -12,8 +13,8 @@
   </div>
   <div class="bottom-beer-card-container">
     <div class="beer-price-container"></div>
-    <div class="beer-button-container">
-      <app-primary-button  [label]="'Add to Cart'" (click)="(beer!)"></app-primary-button>
-    </div>
+    <form class="beer-button-container" >
+      <app-primary-button  [label]="'Add to Cart'" (click)="addToCart()"></app-primary-button>
+    </form>
   </div>
 </div>

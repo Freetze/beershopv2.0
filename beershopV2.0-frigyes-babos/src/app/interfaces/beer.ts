@@ -1,5 +1,5 @@
 export interface Beer {
-  id: number;
+  id: string;
   name: string;
   tagline: string;
   first_brewed: string;
@@ -18,29 +18,5 @@ export interface Beer {
   contributed_by: string;
   price: number;
   badgeType: number
-  badge: boolean;
-  productOfTheWeek: boolean;
-  originalPrice: number;
-//   "method": {
-//     "mash_temp": [
-//       {
-//         "temp": {
-//           "value": number,
-//           "unit": string,
-//         },
-//         "duration": number,
-//       }
-//     ],
-//     "fermentation": {
-//       "temp": {
-//         "value": number,
-//         "unit": string,
-//       }
-//     },
-//   },
-//   "ingredients": {
-//     "malt": any
-//     "hops": any
-//     "yeast": any
-// }
+  quantity: number;
 }

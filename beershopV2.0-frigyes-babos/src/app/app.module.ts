@@ -17,7 +17,6 @@ import { BeerCardComponent } from './components/beer-card/beer-card.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { PrimaryButtonComponent } from './components/buttons/primary-button/primary-button.component';
 import { SecondaryButtonComponent } from './components/buttons/secondary-button/secondary-button.component';
-import { ShoppingCartService } from './services/shopping-cart.service';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { AngularPaginatorModule } from 'angular-paginator';
@@ -42,7 +41,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PaginatorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, AngularPaginatorModule, FormsModule,  ReactiveFormsModule],
-  providers: [BeerService, ShoppingCartService, HttpClientModule],
+  providers: [BeerService, HttpClientModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

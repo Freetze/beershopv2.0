@@ -1,9 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { Beer } from 'src/app/interfaces/beer';
-import { Observable } from 'rxjs';
 import { BeerService } from 'src/app/services/beer.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-window',
@@ -15,23 +11,16 @@ export class ProductWindowComponent implements OnInit {
   @Input('beers')
 
   page: number = 1;
-  tableSize: number = 9;;
-
+  tableSize: number = 9;
   beers$;
   filter$;
 
-  constructor(public service: BeerService) {
+  constructor(public service: BeerService,  ) {
     this.beers$ = this.service.getBeers();
     // console.log(this.beers$);
     this.filter$ = this.service.getBeers();
-
   }
 
-  ngOnInit(): void {}
-
-  onTableDataChange(event: Observable<Beer[]>) {
-    this.beers$ = event;
-    this.page = 1;
+  ngOnInit(): void {
   }
-
 }

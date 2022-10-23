@@ -1,5 +1,4 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 
 @Component({
   selector: 'app-primary-button',
@@ -14,5 +13,6 @@ export class PrimaryButtonComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

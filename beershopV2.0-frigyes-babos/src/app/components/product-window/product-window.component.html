@@ -1,8 +1,9 @@
 <div class="beer-container">
   <div class="beer-boxes">
-    <ng-container *ngFor="let b of beers$ | async as beer ">
+    <ng-container *ngFor="let b of beers$ | async">
       <app-beer-card
         [image_url]="b.image_url"
+        [beer]="b"
         [name]="b.name"
         [tagline]="b.tagline"
         [contributor]="b.contributed_by"
@@ -15,36 +16,34 @@
 </div>
 
 <h5>BEER STYLES</h5>
-<a *ngFor="let f of filter$ | async">
-  <div class="filter-container">
-    <input type="checkbox" routerLink="/" />
-    <label>IPA</label>
-    <input type="checkbox" routerLink="/" />
-    <label>PORTER & STAUT</label>
-    <input type="checkbox" routerLink="/" />
-    <label>LAGER & HELLES</label>
-    <input type="checkbox" routerLink="/" />
-    <label>SOUR ALE & WILD ALE</label>
-    <input type="checkbox" routerLink="/" />
-    <label>SOUR ALE & WILD ALE</label>
-    <br />
-    <h5>METHOD</h5>
-    <input type="checkbox" routerLink="/" />
-    <label>MASH TEMP</label>
-    <input type="checkbox" routerLink="/" />
-    <label>FERMENTATION</label>
-    <input type="checkbox" routerLink="/" />
-    <label>TWIST</label>
-    <br />
-    <h5>SPECIAL PRODUCTS</h5>
-    <input type="checkbox" routerLink="/" />
-    <label>OFFERS</label>
-    <div>
-      <app-secondary-button [label]="'Reset to Default'"></app-secondary-button>
-    </div>
+<div class="filter-container">
+  <input type="checkbox" routerLink="/" />
+  <label>IPA</label>
+  <input type="checkbox" routerLink="/" />
+  <label>PORTER & STAUT</label>
+  <input type="checkbox" routerLink="/" />
+  <label>LAGER & HELLES</label>
+  <input type="checkbox" routerLink="/" />
+  <label>SOUR ALE & WILD ALE</label>
+  <input type="checkbox" routerLink="/" />
+  <label>SOUR ALE & WILD ALE</label>
+  <br />
+  <h5>METHOD</h5>
+  <input type="checkbox" routerLink="/" />
+  <label>MASH TEMP</label>
+  <input type="checkbox" routerLink="/" />
+  <label>FERMENTATION</label>
+  <input type="checkbox" routerLink="/" />
+  <label>TWIST</label>
+  <br />
+  <h5>SPECIAL PRODUCTS</h5>
+  <input type="checkbox" routerLink="/" />
+  <label>OFFERS</label>
+  <div>
+    <app-secondary-button [label]="'Reset to Default'"></app-secondary-button>
   </div>
+</div>
 
-  <!-- <div class="filter-icon" (click)="toggleFilter()">
+<!-- <div class="filter-icon" (click)="toggleFilter()">
   <i class="fas fa-filter"></i>
 </div> -->
-</a>
