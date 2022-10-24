@@ -19,4 +19,28 @@ export interface Beer {
   price: number;
   badgeType: number
   quantity: number;
+  ingredients: string;
+  malt: {
+    name: string;
+    amount: {
+      value: number;
+      unit: string;
+    };
+  }[];
+  hops: {
+    name: string;
+    amount: {
+      value: number;
+      unit: string;
+    };
+    add: string;
+    attribute: string;
+  }[];
+  yeast: string;
+
+  mash_temp: string;
+  fermentation: string;
+  twist: string;
+
 }
+

@@ -16,7 +16,6 @@
   border-radius: 4px;
   flex: none;
   order: 0;
-  flex-grow: 0;
   .upper-beer-card-container {
     display: flex;
     flex-direction: column;
@@ -25,28 +24,24 @@
     gap: 16px;
     width: 270px;
     height: 306px;
-    flex: none;
-    order: 0;
     align-self: stretch;
-    flex-grow: 0;
   }
 
   .beer-img-container {
     width: 270px;
     height: 212px;
-    flex: none;
-    order: 0;
     align-self: stretch;
-    flex-grow: 0;
   }
 
-  .badges-container {
-    width: 270px;
+  .input-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+
+    width: 40px;
     height: 40px;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
   }
 
   .img-container {
@@ -59,7 +54,7 @@
     height: 160px;
     left: 0px;
     top: 52px;
-    background-color: $greyscale-light-grey !important;
+    background-color: $greyscale-very-light-grey !important;
     background-size: 35px !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -91,15 +86,11 @@
   flex: none;
   order: 1;
   align-self: stretch;
-  flex-grow: 0;
 
   .beer-price-container {
     width: 270px;
     height: 59px;
-    flex: none;
-    order: 0;
     align-self: stretch;
-    flex-grow: 0;
   }
 
   .beer-button-container {
@@ -110,19 +101,11 @@
     gap: 16px;
     width: 270px;
     height: 40px;
-    flex: none;
   }
+
   app-primary-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
-    gap: 8px;
-    width: 152px;
+    width: 214px;
     height: 40px;
-    background: $primary-turquoise;
-    border-radius: 4px;
   }
 
   .quantity {
@@ -130,6 +113,30 @@
     height: 40px;
     text-align: center;
     padding: 0;
-
   }
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0px;
+}
+
+.badges-container {
+  width: 270px;
+  height: 40px;
+}
+
+.heart-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 4px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
 }

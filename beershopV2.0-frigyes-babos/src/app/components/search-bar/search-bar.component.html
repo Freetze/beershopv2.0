@@ -1,7 +1,8 @@
-<form class="search-box-container">
+<form class="search-box-container" >
   <input
     required
     ngModel
+    [(ngModel)]="phrase"
     touched
     name="search"
     #search="ngModel"

@@ -2,31 +2,25 @@ import { Injectable } from '@angular/core';
 import { ShoppingCartItem } from '../interfaces/shopping-cart-item';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
+  beer: ShoppingCartItem[] = [];
+  quantity?: number;
 
-beer: ShoppingCartItem[] = [];
-quantity: number = 0;
-
-  constructor() { }
-
+  constructor() {}
 
   addToCart(beer: ShoppingCartItem) {
     this.beer.push(beer);
     console.log(this.beer);
-
   }
 
-  getCart() {
+  removeItem(beer: ShoppingCartItem) {
+    this.beer = this.beer.filter((x) => x.beer.id !== beer.beer.id);
     return this.beer;
   }
 
-  clearCart() {
-    this.beer = [];
-    return this.beer;
+  totalItemsCount() {
+    return this.beer.length;
   }
-
-
 }
-

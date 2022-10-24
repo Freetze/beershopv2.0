@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, Input, OnInit } from '@angular/core';
+import { ShoppingCartItem } from 'src/app/interfaces/shopping-cart-item';
+import { CartService } from 'src/app/services/cart.service';
 import { Beer } from 'src/app/interfaces/beer';
 
 @Component({
@@ -8,9 +9,10 @@ import { Beer } from 'src/app/interfaces/beer';
   styleUrls: ['./shopping-cart.component.scss'],
 })
 export class ShoppingCartComponent implements OnInit {
-  cart$!: Observable<Beer[]>;
+  constructor(private cartService: CartService) {}
 
-  constructor() {}
+
+items: ShoppingCartItem[] = this.cartService.beer;
 
   ngOnInit(): void {}
 }

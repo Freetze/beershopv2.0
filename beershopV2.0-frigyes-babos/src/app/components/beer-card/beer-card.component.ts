@@ -16,27 +16,44 @@ export class BeerCardComponent implements OnInit {
   @Input() image_url?: string;
   @Input() tagline?: string;
   @Input() contributor?: string;
+  @Input() beerPrice?: number;
+
+  @Input('show-cart') showCart: boolean = true;
+  @Input('shopping-cart') shoppingCart: ShoppingCartItem[] = [];
 
   constructor(
-    private beerService: BeerService,
+    private service: BeerService,
     private cartService: CartService,
-    private router: Router
+    public router: Router
   ) {}
 
-  // addToCart(beer: ShoppingCartItem) {
-  //   this.cartService.addToCart(beer);
-  //   window.alert('Your product has been added to the cart!');
-
-  // }
+  selectBeer(beer: Beer){
+    this.router.navigate(['/details', {id: beer.id}])
+    this.service.selectedBeer = beer;
+  }
 
   addToCart() {
-    console.log(this.beer);
-
     if (this.beer) {
       let cartItem: ShoppingCartItem = { beer: this.beer, quantity: 1 };
       this.cartService.addToCart(cartItem);
-
     }
+  }
+
+  removeFromCart() {
+    if (this.beer) {
+      let cartItem: ShoppingCartItem = { beer: this.beer, quantity: -1 };
+      this.cartService.addToCart(cartItem);
+    }
+  }
+
+
+  getQuantity() {
+    if (!this.shoppingCart) return 0;
+    if (this.beer) {
+      let item = this.shoppingCart.find((x) => x.beer.id === this.beer?.id);
+      return item ? item.quantity : 0;
+    }
+    return 0;
   }
 
   ngOnInit(): void {}

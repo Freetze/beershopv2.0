@@ -21,6 +21,10 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { AngularPaginatorModule } from 'angular-paginator';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BadgesComponent } from './components/badges/badges.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { FilterPipe } from './components/filter/filter.pipe';
+import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [
@@ -39,9 +43,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SecondaryButtonComponent,
     ShoppingCartComponent,
     PaginatorComponent,
+    BadgesComponent,
+    ModalComponent,
+    FilterPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, AngularPaginatorModule, FormsModule,  ReactiveFormsModule],
-  providers: [BeerService, HttpClientModule],
+  providers: [BeerService, HttpClientModule, CartService ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

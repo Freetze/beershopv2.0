@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Beer } from 'src/app/interfaces/beer';
 import { BeerService } from 'src/app/services/beer.service';
 
@@ -9,9 +9,12 @@ import { BeerService } from 'src/app/services/beer.service';
 })
 export class DetailsPageComponent implements OnInit {
 
-  beer?: Beer;
+  @Input() name?: string ;
 
-  constructor( private service: BeerService) { }
+
+  constructor( public service: BeerService) { }
+
+
 
   ngOnInit(): void {
   }
