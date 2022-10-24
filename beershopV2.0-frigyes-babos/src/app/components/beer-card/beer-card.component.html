@@ -21,15 +21,12 @@
   <div class="bottom-beer-card-container">
     <div class="beer-price-container">
       <h3>
-        <small>€{{ beerPrice! - beerPrice! / 1.5 | number: "1.2-2" }}</small>
+        <small>{{ randomPrice() | currency: 'EUR' }}</small>
       </h3>
       <p>Content <small>0.44 Liter</small></p>
     </div>
-    <form class="beer-button-container" *ngIf="showCart">
-      <input class="input-cont" type="text" placeholder="1" />
-      <ng-template>
-        <div>{{ getQuantity() }}</div>
-      </ng-template>
+    <form class="beer-button-container" *ngIf="getQuantity() ===0">
+      <input class="input-cont" type="text" placeholder="1" (click)="getQuantity()" />
       <app-primary-button
         (click)="addToCart()"
       ></app-primary-button>

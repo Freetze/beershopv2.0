@@ -62,9 +62,9 @@
     caret-color: transparent;
     cursor: pointer;
 
-    .img-container:hover {
-      transform: scale(1.5);
-      z-index: 1;
+    &.img-container:hover {
+      transform: scale(1.1);
+      z-index: 2;
     }
   }
 
@@ -101,12 +101,9 @@
     gap: 16px;
     width: 270px;
     height: 40px;
+
   }
 
-  app-primary-button {
-    width: 214px;
-    height: 40px;
-  }
 
   .quantity {
     width: 40px;

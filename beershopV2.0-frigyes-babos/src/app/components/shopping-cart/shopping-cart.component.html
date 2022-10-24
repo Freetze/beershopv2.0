@@ -11,10 +11,14 @@
   </thead>
 <tbody *ngFor="let item of items">
   <tr>
-    <td>{{item.beer}}</td>
-    <td>{{item.quantity}}</td>
-    <td></td>
+    <th style="width: 270px">{{item}}</th>
+    <th style="width: 270px">{{item}}</th>
+    <th style="width: 230px">{{item}}</th>
+    <th style="width: 230px">{{item}}</th>
+    <th style="width: 230px">{{item}}</th>
   </tr>
+
+  <button (click)="removeFromCart()">remove</button>
 </tbody>
 </table>
 <!-- <tbody>

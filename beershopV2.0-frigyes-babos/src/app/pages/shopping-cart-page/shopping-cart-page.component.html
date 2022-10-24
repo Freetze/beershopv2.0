@@ -3,12 +3,29 @@
   <div class="shopping-table-container">
     <app-shopping-cart></app-shopping-cart>
   </div>
-  <div class="recommended-container"></div>
 
-  
-  <div class="recently-container">
-    <ng-container *ngFor="let beer of recentlyService.seenItems">
-      <app-beer-card [beer]="beer"></app-beer-card>
-    </ng-container>
+  <div class="total-container">
+    <div class="total-price-container">
+      <h3>Summary</h3>
+      <br>
+      <h5>Free shipping from 500€</h5>
+      <br />
+      <br />
+      <h5>Items:</h5>
+      <h5>VAT:</h5>
+      <h5>Shipping & handling:</h5>
+      <br />
+      <br />
+      <h3>ORDER TOTAL:</h3>
+    </div>
+    <div class="checkout-container">
+      <button class="checkout"><img src="assets/img/shopping.svg" alt="">Checkout</button>
+    </div>
+    <div class="recommended-container"></div>
+    <div class="recently-container">
+      <ng-container *ngFor="let beer of recentlyService.seenItems">
+        <app-beer-card [beer]="beer"></app-beer-card>
+      </ng-container>
+    </div>
   </div>
 </div>

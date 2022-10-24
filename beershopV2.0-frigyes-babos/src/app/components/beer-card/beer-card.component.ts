@@ -20,6 +20,7 @@ export class BeerCardComponent implements OnInit {
 
   @Input('show-cart') showCart: boolean = true;
   @Input('shopping-cart') shoppingCart: ShoppingCartItem[] = [];
+  cartItem: ShoppingCartItem[] = [];
 
   constructor(
     private service: BeerService,
@@ -27,8 +28,8 @@ export class BeerCardComponent implements OnInit {
     public router: Router
   ) {}
 
-  selectBeer(beer: Beer){
-    this.router.navigate(['/details', {id: beer.id}])
+  selectBeer(beer: Beer) {
+    this.router.navigate(['/details', { id: beer.id }]);
     this.service.selectedBeer = beer;
   }
 
@@ -44,6 +45,12 @@ export class BeerCardComponent implements OnInit {
       let cartItem: ShoppingCartItem = { beer: this.beer, quantity: -1 };
       this.cartService.addToCart(cartItem);
     }
+  }
+
+  randomPrice() {
+    let beerPrice = Math.floor(Math.random() * 10) + 4;
+    return beerPrice;
+    // console.log(beerPrice);
   }
 
 

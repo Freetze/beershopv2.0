@@ -9,6 +9,12 @@ import { ShoppingCartItem } from 'src/app/interfaces/shopping-cart-item';
 export class PrimaryButtonComponent implements OnInit {
   @Input() label: string = 'Add to Cart'
 
+  @Input() buttonLabel?: string;
+  @Input() imgSrc?: string;
+  @Input() type?: string;
+  @Input() buttonWidth?: string;
+
+
 
   constructor() { }
 

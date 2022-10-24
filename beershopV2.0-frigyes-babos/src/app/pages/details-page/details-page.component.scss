@@ -1,47 +1,66 @@
 @import "../../../assets/styles/variables";
 @import "../../../assets/styles/mixins";
 
-.details-container {
+// .details-container {
+//   position: absolute;
+//   width: 1280px;
+//   height: 918px;
+//   left: 80px;
+//   top: 329px;
+// }
+.img-container {
   position: absolute;
-  width: 1280px;
-  height: 918px;
+  width: 954px;
+  height: 350px;
   left: 80px;
   top: 329px;
+}
 
-  .img-container {
-    position: absolute;
-    width: 954px;
-    height: 318px;
-    left: 80px;
-    top: 329px;
-  }
+.button-container {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
-  .description-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 32px;
-    position: absolute;
-    width: 628px;
-    height: 536px;
-    left: 80px;
-    top: 711px;
-  }
+.description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+  position: absolute;
+  width: 628px;
+  height: 536px;
+  left: 80px;
+  top: 711px;
+}
 
-  .summary-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px;
-    gap: 32px;
-    position: absolute;
-    width: 302px;
-    height: 311px;
-    left: 1058px;
-    top: 330px;
-    background: #f2f2f2;
-  }
+.input {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0px;
+  width: 150px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #7b7e82;
+  border-radius: 4px;
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 32px;
+  position: absolute;
+  width: 302px;
+  height: 400px;
+  left: 1058px;
+  top: 330px;
+  background: #f2f2f2;
 }
 
 .ingredients {
@@ -98,4 +117,12 @@
   width: 628px;
   height: 88px;
   border-bottom: 1px solid $greyscale-grey;
+}
+
+.recently-container {
+  position: absolute;
+  width: 1440px;
+  height: 495px;
+  left: 0px;
+  top: 1328px;
 }

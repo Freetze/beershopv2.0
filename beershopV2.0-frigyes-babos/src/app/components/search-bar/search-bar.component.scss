@@ -13,7 +13,7 @@
   height: 40px;
   left: 0px;
   top: 0px;
-  border: 1px solid $greyscale-dark-grey;;
+  border: 1px solid $greyscale-dark-grey;
   border-radius: 4px;
   .search-button {
     position: absolute;
@@ -23,6 +23,10 @@
     bottom: 0%;
     background: #5ab0bb;
     border-radius: 0px 2px 2px 0px;
+
+    &:hover {
+      border: $accent-orange;
+    }
   }
 
   .input-container {
@@ -32,13 +36,19 @@
     outline: none;
     font-size: 16px;
     padding: 0 5px;
+
+    &:focus {
+      background: $greyscale-white;
+      border: 2px solid $accent-orange;
+      border-radius: 4px;
+    }
   }
 
   .danger-container {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: right;
     padding: 8px 16px;
     gap: 10px;
     position: absolute;
@@ -46,7 +56,7 @@
     height: 40px;
     left: 0px;
     top: 0px;
-     border: 1px solid #be0028;
+    border: 1px solid #be0028;
     border-radius: 4px;
     color: #be0028;
   }

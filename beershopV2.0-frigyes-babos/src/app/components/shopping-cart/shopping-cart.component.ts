@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ShoppingCartItem } from 'src/app/interfaces/shopping-cart-item';
 import { CartService } from 'src/app/services/cart.service';
 import { Beer } from 'src/app/interfaces/beer';
+import { BeerService } from 'src/app/services/beer.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -9,10 +10,26 @@ import { Beer } from 'src/app/interfaces/beer';
   styleUrls: ['./shopping-cart.component.scss'],
 })
 export class ShoppingCartComponent implements OnInit {
-  constructor(private cartService: CartService) {}
+  @Input() beer?: Beer;
+
+  constructor(private cartService: CartService, private service: BeerService) {}
+
+  items: ShoppingCartItem[] = this.cartService.beer;
 
 
-items: ShoppingCartItem[] = this.cartService.beer;
+  addToCart() {
+    if (this.beer) {
+      let cartItem: ShoppingCartItem = { beer: this.beer, quantity: 1 };
+      this.cartService.addToCart(cartItem);
+    }
+  }
+
+  removeFromCart() {
+    if (this.beer) {
+      let cartItem: ShoppingCartItem = { beer: this.beer, quantity: -1 };
+      this.cartService.addToCart(cartItem);
+    }
+  }
 
   ngOnInit(): void {}
 }

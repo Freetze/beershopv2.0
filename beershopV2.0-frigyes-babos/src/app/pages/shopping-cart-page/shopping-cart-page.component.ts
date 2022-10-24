@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RecentlyVisitedService } from 'src/app/services/recently.service';
 
 @Component({
@@ -7,9 +7,9 @@ import { RecentlyVisitedService } from 'src/app/services/recently.service';
   styleUrls: ['./shopping-cart-page.component.scss']
 })
 export class ShoppingCartPageComponent implements OnInit {
+@Input() label: string = 'Checkout';
 
   constructor(public recentlyService: RecentlyVisitedService) {
-
   }
 
   ngOnInit(): void {

@@ -1,10 +1,4 @@
-@import "../../../assets/styles/variables";
-@import "../../../assets/styles/mixins";
-
-
-
 button {
-
   height: 40px;
   display: flex;
   justify-content: center;
@@ -13,30 +7,16 @@ button {
   padding: 8px 24px;
   border: none;
   border-radius: 4px;
-  background-color: $primary-turquoise;
   color: white;
-  div {
-      width: 24px;
-      height: 24px;
-      object-fit: cover;
-  }
+  background: #5ab0bb;
 
-  img {
-    width: 24px;
-    height: 24px;
-      }
-
-  p {
-      @include button-label
-  }
   &:hover {
-      background-color: $primary-turquoise-dark;
+    background: #1493a4;
+    border-radius: 4px;
   }
-  &:active {
-      background-color: $primary-turquoise-dark;
-      outline: none;
-      border: 2px solid $accent-orange;
-      border-radius: 4px;
 
+  &:active {
+    border: 2px solid #fb8200;
+    border-radius: 4px;
   }
 }

@@ -16,7 +16,7 @@ export interface Beer {
   food_pairing: string[];
   brewers_tips: string;
   contributed_by: string;
-  price: number;
+  beerPrice: number;
   badgeType: number
   quantity: number;
   ingredients: string;
