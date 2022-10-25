@@ -11,6 +11,7 @@ import { BeerService } from 'src/app/services/beer.service';
 })
 export class ShoppingCartComponent implements OnInit {
   @Input() beer?: Beer;
+  @Input() image_url?: string
 
   constructor(private cartService: CartService, private service: BeerService) {}
 
@@ -27,7 +28,7 @@ export class ShoppingCartComponent implements OnInit {
   removeFromCart() {
     if (this.beer) {
       let cartItem: ShoppingCartItem = { beer: this.beer, quantity: -1 };
-      this.cartService.addToCart(cartItem);
+      this.cartService.removeItem(cartItem);
     }
   }
 

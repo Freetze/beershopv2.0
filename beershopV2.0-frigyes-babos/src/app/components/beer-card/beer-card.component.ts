@@ -43,7 +43,7 @@ export class BeerCardComponent implements OnInit {
   removeFromCart() {
     if (this.beer) {
       let cartItem: ShoppingCartItem = { beer: this.beer, quantity: -1 };
-      this.cartService.addToCart(cartItem);
+      this.cartService.removeItem(cartItem);
     }
   }
 
@@ -52,6 +52,7 @@ export class BeerCardComponent implements OnInit {
     return beerPrice;
     // console.log(beerPrice);
   }
+
 
 
   getQuantity() {

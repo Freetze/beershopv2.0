@@ -23,6 +23,8 @@
     </div>
     <div class="recommended-container"></div>
     <div class="recently-container">
+
+      
       <ng-container *ngFor="let beer of recentlyService.seenItems">
         <app-beer-card [beer]="beer"></app-beer-card>
       </ng-container>
